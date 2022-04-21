@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2F2F2F;
+}
+
+.spacing {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 5px;
+    margin: 0 100px;
+}
+
+img {
+    height: 100%;
+}
+
+.glass {
+    display: flex;
+    height: 60%;
+}
