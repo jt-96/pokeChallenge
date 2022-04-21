@@ -1,0 +1,18 @@
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+h1 {
+    text-align: left;
+    margin-left: 45px;
+}
+
+.pokemons {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,16 @@
+.card {
+    margin: 1rem;
+}
+
+.card img {
+    height: 250px;
+    background-color: #E1E1E1;
+}
+
+.card p {
+    text-align: left;
+}
+
+.card span {
+    text-align: left;
+}

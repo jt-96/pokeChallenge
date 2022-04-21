@@ -1,7 +1,9 @@
 import { Fragment, useState, useEffect } from "react";
 import PokeCard from "../pokeCard/pokeCard";
+import PokeRecent from "../pokeRecent/pokeRecent";
+import './pokeDex.css';
 
-function PokeDex(){
+function PokeDex() {
 
     // fetch https://pokeapi.co/api/v2/pokemon?offset=0&limit=9
     const [currentPokemons, setCurrentPokemons] = useState([]);
@@ -11,7 +13,7 @@ function PokeDex(){
             const response = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=9');
             const data = await response.json();
             setCurrentPokemons(data.results);
-            console.log(data);
+            // console.log(data.results);
         }
 
         getPokemons();
@@ -20,12 +22,22 @@ function PokeDex(){
 
     return (
         <Fragment>
-            <h1>LOGO - POKEDEX</h1>
-            {
-                currentPokemons.map((pokemon) => (
-                    <PokeCard current={pokemon}/>
-                ))
-            }
+            <div className="cont">
+                <div>
+                    <h1>LOGO - POKEDEX</h1>
+                    <div className="pokemons">
+
+                    {
+                        currentPokemons.map((pokemon, index) => (
+                            <PokeCard key={index} current={pokemon} />
+                        ))
+                    }
+                    </div>
+                </div>
+                <div>
+                    <PokeRecent />
+                </div>
+            </div>
         </Fragment>
     )
 }
