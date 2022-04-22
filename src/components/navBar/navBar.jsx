@@ -16,13 +16,13 @@ function NavBar(props) {
 
     return (
         <Fragment>
-            <div className="container">
-                <div className="spacing">
-                    <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt="logo" />
+            <div className="navbar">
+                <div className="">
+                    <img className="navbar__logo" src={process.env.PUBLIC_URL + "/img/logo.png"} alt="logo" />
                 </div>
-                <div >
-                    <button type="button" className="spacing" onClick={handleClick}>
-                        <img className="glass" src={process.env.PUBLIC_URL + "/img/lupa.png"} alt="magnifying glass" />
+                <div>
+                    <button type="button" className="navbar__button" onClick={handleClick}>
+                        <img className="navbar__logo" src={process.env.PUBLIC_URL + "/img/lupa.png"} alt="magnifying glass" />
                     </button>
                 </div>
             </div>

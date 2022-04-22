@@ -1,0 +1,22 @@
+@mixin flex {
+    display: flex;
+}
+
+.navbar {
+    @include flex();
+    justify-content: space-between;
+    background-color: #2F2F2F;
+    padding: 5px;
+
+    &__logo {
+        @include flex();
+        align-items: center;
+        height: 35px;
+        margin: 0 100px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
