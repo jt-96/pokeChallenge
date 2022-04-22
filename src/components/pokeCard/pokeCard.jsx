@@ -33,7 +33,7 @@ function PokeCard(props) {
                 isActive && <PokeModal selected={props.current} onCloseModal={closeModal}/>
             }
             <div className="card" onClick={handleClick}>
-                <img src={pokemon.sprites?.other.home.front_default} />
+                <img src={pokemon.sprites?.other.home.front_default} alt="pokemon"/>
                 <p>N° {pokemon.order}</p>
                 <p>{pokemon.name}</p>
                 {
