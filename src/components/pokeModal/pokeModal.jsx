@@ -14,6 +14,10 @@ function PokeModal(props) {
         getPokemon();
     }, [])
 
+    function handleModal(){
+        props.onCloseModal(false);
+    }
+
     return (
         <div className="modal">
             <img src={selectedPokemon.sprites?.front_default} alt="Pokemon" />
@@ -29,6 +33,7 @@ function PokeModal(props) {
                     return <p key={index}>{stat.stat.name} - {stat.base_stat}</p>
                 })
             }
+            <button type="button" onClick={handleModal}>Close</button>
         </div>
     );
 }

@@ -5,7 +5,6 @@ import './pokeCard.css';
 function PokeCard(props) {
 
     const [pokemon, setPokemon] = useState({});
-    const [isLoaded, setIsLoaded] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -13,21 +12,25 @@ function PokeCard(props) {
             const response = await fetch(props.current.url);
             const data = await response.json();
             setPokemon(data);
-            setIsLoaded(true);
         }
 
         getPokemon();
 
-    }, [isLoaded]);
+    }, []);
 
     function handleClick() {
-        setIsActive(!isActive);
+        setIsActive(true);
+        props.onAddRecentPokemon(pokemon);
+    }
+
+    function closeModal(result) {
+        setIsActive(result)
     }
 
     return (
         <Fragment>
             {
-                isActive && <PokeModal selected={props.current} />
+                isActive && <PokeModal selected={props.current} onCloseModal={closeModal}/>
             }
             <div className="card" onClick={handleClick}>
                 <img src={pokemon?.sprites?.front_default} />

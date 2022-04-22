@@ -7,6 +7,7 @@ function PokeDex() {
 
     // fetch https://pokeapi.co/api/v2/pokemon?offset=0&limit=9
     const [currentPokemons, setCurrentPokemons] = useState([]);
+    const [recentPokemon, setRecentPokemon] = useState([]);
 
     useEffect(() => {
         const getPokemons = async () => {
@@ -19,6 +20,12 @@ function PokeDex() {
 
     }, []);
 
+    function addRecentPokemon(pokemon){
+        setRecentPokemon((prevValue) => {
+            return [pokemon, ...prevValue];
+        })
+    }
+
     return (
         <div className="cont">
             <div>
@@ -26,13 +33,13 @@ function PokeDex() {
                 <div className="pokemons">
                     {
                         currentPokemons.map((pokemon, index) => (
-                            <PokeCard key={index} current={pokemon}/>
+                            <PokeCard key={index} current={pokemon} onAddRecentPokemon={addRecentPokemon}/>
                         ))
                     }
                 </div>
             </div>
             <div>
-                <PokeRecent />
+                <PokeRecent recent={recentPokemon}/>
             </div>
         </div>
     )
