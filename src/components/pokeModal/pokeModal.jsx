@@ -12,7 +12,7 @@ function PokeModal(props) {
         }
 
         getPokemon();
-    }, [])
+    }, [props.selected.url])
 
     function handleModal(){
         props.onCloseModal(false);
