@@ -1,10 +1,12 @@
 import { Fragment, useEffect, useState } from "react";
+import PokeModal from "../pokeModal/pokeModal";
 import './pokeCard.css';
 
 function PokeCard(props) {
 
     const [pokemon, setPokemon] = useState({});
-    const [isLoaded, setIsLoaded] = useState(false)
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         const getPokemon = async () => {
@@ -15,10 +17,19 @@ function PokeCard(props) {
         }
 
         getPokemon();
-    }, [isLoaded])
+
+    }, [isLoaded]);
+
+    function handleClick() {
+        setIsActive(!isActive);
+    }
 
     return (
-            <div className="card">
+        <Fragment>
+            {
+                isActive && <PokeModal selected={props.current} />
+            }
+            <div className="card" onClick={handleClick}>
                 <img src={pokemon?.sprites?.front_default} />
                 <p>N° {pokemon.order}</p>
                 <p>{pokemon.name}</p>
@@ -28,6 +39,7 @@ function PokeCard(props) {
                     ))
                 }
             </div>
+        </Fragment>
     );
 }
 

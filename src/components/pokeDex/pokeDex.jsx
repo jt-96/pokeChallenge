@@ -13,31 +13,28 @@ function PokeDex() {
             const response = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=9');
             const data = await response.json();
             setCurrentPokemons(data.results);
-            // console.log(data.results);
         }
 
         getPokemons();
-    }, [])
 
+    }, []);
 
     return (
-        <Fragment>
-            <div className="cont">
-                <div>
-                    <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
-                    <div className="pokemons">
+        <div className="cont">
+            <div>
+                <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
+                <div className="pokemons">
                     {
                         currentPokemons.map((pokemon, index) => (
-                            <PokeCard key={index} current={pokemon} />
+                            <PokeCard key={index} current={pokemon}/>
                         ))
                     }
-                    </div>
-                </div>
-                <div>
-                    <PokeRecent />
                 </div>
             </div>
-        </Fragment>
+            <div>
+                <PokeRecent />
+            </div>
+        </div>
     )
 }
 
