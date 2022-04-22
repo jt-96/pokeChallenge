@@ -34,7 +34,7 @@ function PokeCard(props) {
             }
             <div className="card" onClick={handleClick}>
                 <img src={pokemon.sprites?.other.home.front_default} alt="pokemon"/>
-                <p>N° {pokemon.order}</p>
+                <p>N° {pokemon.id}</p>
                 <p>{pokemon.name}</p>
                 {
                     pokemon.types?.map((types, index) => (
