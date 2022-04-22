@@ -16,7 +16,7 @@ function PokeCard(props) {
 
         getPokemon();
 
-    }, []);
+    }, [pokemon]);
 
     function handleClick() {
         setIsActive(true);

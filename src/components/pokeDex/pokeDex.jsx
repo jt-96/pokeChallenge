@@ -3,11 +3,25 @@ import PokeCard from "../pokeCard/pokeCard";
 import PokeRecent from "../pokeRecent/pokeRecent";
 import './pokeDex.css';
 
-function PokeDex() {
+const filterPokemons = (pokemons, query) => {
+    if(!query) {
+        return pokemons;
+    }
 
+    return pokemons.filter((pokemon) => {
+        const pokemonName = pokemon.name;
+        return pokemonName.toLowerCase().includes(query);
+    })
+}
+
+function PokeDex(props) {
+
+    console.log(props.query);
     // fetch https://pokeapi.co/api/v2/pokemon?offset=0&limit=9
     const [currentPokemons, setCurrentPokemons] = useState([]);
     const [recentPokemon, setRecentPokemon] = useState([]);
+    const filteredPokemons = filterPokemons(currentPokemons, props.query);
+    console.log(filteredPokemons);
 
     useEffect(() => {
         const getPokemons = async () => {
@@ -32,7 +46,7 @@ function PokeDex() {
                 <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
                 <div className="pokemons">
                     {
-                        currentPokemons.map((pokemon, index) => (
+                        filteredPokemons.map((pokemon, index) => (
                             <PokeCard key={index} current={pokemon} onAddRecentPokemon={addRecentPokemon}/>
                         ))
                     }

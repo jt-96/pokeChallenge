@@ -1,12 +1,19 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
-function SearchBar() {
+function SearchBar(props) {
+
+    const [searchQuery, setSearchQuery] = useState('');
+
+    function handleInput(e) {
+        setSearchQuery(e.target.value);
+        props.onHandleChange(e.target.value);
+    }
 
     return (
         <Fragment>
             <span>BUSCAR POR NOMBRE O NÚMERO</span>
-            <form action="">
-                <input type="text" name="" id="" />
+            <form>
+                <input type="text" name="s" value={searchQuery} onChange={handleInput} />
             </form>
             <span>Usa la búsqueda avanzada para encontrar Pokemons por otros filtros</span>
 

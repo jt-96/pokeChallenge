@@ -2,12 +2,18 @@ import { Fragment, useState } from "react";
 import SearchBar from "../searchBar/searchBar";
 import './navBar.css';
 
-function NavBar() {
+function NavBar(props) {
 
     const [isEnabled, setIsEnabled] = useState(false);
+    const { search } = window.location;
+    const query = new URLSearchParams(search).get('s');
 
     const handleClick = () => {
         setIsEnabled(!isEnabled);
+    }
+
+    function handleChange(param) {
+        props.onAddSearchParam(param);
     }
 
     return (
@@ -23,7 +29,7 @@ function NavBar() {
                 </div>
             </div>
             {
-                isEnabled && <SearchBar />
+                isEnabled && <SearchBar onHandleChange={handleChange}/>
             }
         </Fragment>
     );
