@@ -1,11 +1,14 @@
-import { Fragment } from "react";
-
+import PokeRecentCard from "../pokeRecentCard/pokeRecentCard";
+import './pokeRecent.css';
 function PokeRecent(){
 
     return (
-        <Fragment>
+        <div className="recentContainer">
             <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />RECIENTES</h2>
-        </Fragment>
+            <PokeRecentCard />
+            <PokeRecentCard />
+            <PokeRecentCard />
+        </div>
     )
 }
 
