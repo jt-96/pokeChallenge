@@ -1,0 +1,26 @@
+$bottomPosition: 120px;
+
+.recent {
+    background-color: #343434;
+    height: 40vh;
+    width: 30vw;
+    margin-top: 60px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+
+    &__image {
+        position: relative;
+        height: 100%;
+        bottom: $bottomPosition;
+    }
+
+    &__info {
+        color: #EEEEEE;
+        margin: 1rem;
+        position: relative;
+        bottom: $bottomPosition;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

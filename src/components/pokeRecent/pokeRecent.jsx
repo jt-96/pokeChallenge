@@ -4,7 +4,7 @@ import './pokeRecent.css';
 function PokeRecent(props){
 
     return (
-        <div className="recent">
+        <div className="recent__container">
             {
                 props.recent?.slice(0, 3).map((pokemon, index) => (
 
