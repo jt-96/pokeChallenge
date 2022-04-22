@@ -11,6 +11,7 @@
     text-align: left;
 }
 
-.card span {
-    text-align: left;
+span {
+    float: left;
+    margin-right: .5rem;
 }

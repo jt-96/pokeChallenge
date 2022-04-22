@@ -24,7 +24,7 @@ function PokeCard(props) {
                 <p>{pokemon.name}</p>
                 {
                     pokemon?.types?.map((types, index) => (
-                        <span key={index}>{types.type.name} </span>
+                        <span key={index}>{types.type.name}</span>
                     ))
                 }
             </div>
