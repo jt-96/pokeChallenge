@@ -4,18 +4,19 @@ import PokeCard from "../pokeCard/pokeCard";
 import PokeRecent from "../pokeRecent/pokeRecent";
 import './pokeDex.css';
 
-function PokeDex(props) {
-    
-    function filterPokemons(pokemons, query){
-        if (!query) {
-            return pokemons;
-        }
-    
-        return pokemons.filter((pokemon) => {
-            const pokemonName = pokemon.name;
-            return pokemonName.toLowerCase().includes(query);
-        })
+function filterPokemons(pokemons, query) {
+    if (!query) {
+        return pokemons;
     }
+
+    return pokemons.filter((pokemon) => {
+        const pokemonName = pokemon.name;
+        return pokemonName.toLowerCase().includes(query);
+    })
+}
+
+function PokeDex(props) {
+
 
     const [currentPokemons, setCurrentPokemons] = useState([]);
     const [recentPokemon, setRecentPokemon] = useState([]);
@@ -26,9 +27,9 @@ function PokeDex(props) {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?&limit=9&offset=${offset}`);
         const data = await response.json();
 
-        if(currentPokemons.length === 0){
+        if (currentPokemons.length === 0) {
             setCurrentPokemons(data.results);
-            
+
         } else {
             setCurrentPokemons((prevResults) => {
                 return [...prevResults, ...data.results]
@@ -50,16 +51,16 @@ function PokeDex(props) {
 
     return (
         <Fragment>
-            <div className="cont">
+            <div className="pokedex">
                 <div>
-                    <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
+                    <h2 className="pokedex__title"><img className="pokedex__img" src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
                     <div>
                         <InfiniteScroll
-                            className="pokemons"
+                            className="pokedex__pokemons"
                             dataLength={filteredPokemons.length}
                             next={getPokemons}
                             hasMore={true}
-                            loader={<h4>Loading...</h4>}
+                            loader={<h4 className="pokedex__loading"><img className="pokedex__img" src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" /> Cargando...</h4>}
                             endMessage={
                                 <p>Finished!</p>
                             }

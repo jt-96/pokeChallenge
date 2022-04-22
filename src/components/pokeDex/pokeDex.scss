@@ -1,0 +1,35 @@
+$pokeDexColor: #F1F1F1;
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pokedex {
+    @include flexRow();
+    align-items: flex-start;
+    background-color: $pokeDexColor;
+
+    &__title {
+        @include flexRow();
+        text-align: left;
+        margin-left: 45px;
+    }
+
+    &__img {
+        height: 10vh;
+    }
+
+    &__pokemons {
+        @include flexRow();
+        width: 65vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__loading {
+        @include flexRow();
+        flex-direction: column;
+    }
+}
