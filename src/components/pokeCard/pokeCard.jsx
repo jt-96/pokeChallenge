@@ -8,13 +8,13 @@ function PokeCard(props) {
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
-        const getPokemon = async () => {
+        async function getAPokemon() {
             const response = await fetch(props.current.url);
             const data = await response.json();
             setPokemon(data);
         }
 
-        getPokemon();
+        getAPokemon();
 
     }, [pokemon]);
 
@@ -24,7 +24,7 @@ function PokeCard(props) {
     }
 
     function closeModal(result) {
-        setIsActive(result)
+        setIsActive(result);
     }
 
     return (

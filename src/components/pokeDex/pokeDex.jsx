@@ -6,7 +6,7 @@ import './pokeDex.css';
 
 function PokeDex(props) {
     
-    const filterPokemons = (pokemons, query) => {
+    function filterPokemons(pokemons, query){
         if (!query) {
             return pokemons;
         }
@@ -17,22 +17,24 @@ function PokeDex(props) {
         })
     }
 
-    // fetch https://pokeapi.co/api/v2/pokemon?offset=0&limit=9
     const [currentPokemons, setCurrentPokemons] = useState([]);
     const [recentPokemon, setRecentPokemon] = useState([]);
     const [offset, setOffset] = useState(0);
     const filteredPokemons = filterPokemons(currentPokemons, props.query);
 
-    const getPokemons = async () => {
+    async function getPokemons() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?&limit=9&offset=${offset}`);
         const data = await response.json();
-        if(currentPokemons.length == 0){
+
+        if(currentPokemons.length === 0){
             setCurrentPokemons(data.results);
+            
         } else {
             setCurrentPokemons((prevResults) => {
                 return [...prevResults, ...data.results]
-            })
+            });
         }
+
         setOffset((offset) => offset + 9);
     }
 
@@ -43,7 +45,7 @@ function PokeDex(props) {
     function addRecentPokemon(pokemon) {
         setRecentPokemon((prevValue) => {
             return [pokemon, ...prevValue];
-        })
+        });
     }
 
     return (

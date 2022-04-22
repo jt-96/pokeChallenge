@@ -11,17 +11,15 @@ function SearchBar(props) {
 
     return (
         <Fragment>
-            <span>BUSCAR POR NOMBRE O NÚMERO</span>
+            <span>BUSCAR POR NOMBRE</span>
             <form>
                 <input type="text" name="s" value={searchQuery} onChange={handleInput} />
             </form>
-            <span>Usa la búsqueda avanzada para encontrar Pokemons por otros filtros</span>
 
             <div>
                 <span>Logo</span>
-                <p>BUSCA TU POKEMON POR EL NOMBRE O USANDO SU NÚMERO DE IDENTIFICACION</p>
+                <p>BUSCA TU POKEMON POR EL NOMBRE</p>
             </div>
-            <button>BUSQUEDA AVANZADA</button>
         </Fragment>
     )
 }

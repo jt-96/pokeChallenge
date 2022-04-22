@@ -5,13 +5,14 @@ function PokeModal(props) {
     const [selectedPokemon, setSelectedPokemon] = useState({});
 
     useEffect(() => {
-        const getPokemon = async () => {
+        async function getSelectedPokemon(){
             const response = await fetch(props.selected.url);
             const data = await response.json();
             setSelectedPokemon(data);
         }
 
-        getPokemon();
+        getSelectedPokemon();
+        
     }, [props.selected.url])
 
     function handleModal(){

@@ -6,7 +6,7 @@ function NavBar(props) {
 
     const [isEnabled, setIsEnabled] = useState(false);
 
-    const handleClick = () => {
+    function handleClick() {
         setIsEnabled(!isEnabled);
     }
 

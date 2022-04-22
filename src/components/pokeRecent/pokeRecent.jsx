@@ -1,5 +1,6 @@
 import PokeRecentCard from "../pokeRecentCard/pokeRecentCard";
 import './pokeRecent.css';
+
 function PokeRecent(props){
 
     return (
