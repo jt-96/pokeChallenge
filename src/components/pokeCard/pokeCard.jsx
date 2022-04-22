@@ -33,11 +33,11 @@ function PokeCard(props) {
                 isActive && <PokeModal selected={props.current} onCloseModal={closeModal}/>
             }
             <div className="card" onClick={handleClick}>
-                <img src={pokemon?.sprites?.front_default} />
+                <img src={pokemon.sprites?.other.home.front_default} />
                 <p>N° {pokemon.order}</p>
                 <p>{pokemon.name}</p>
                 {
-                    pokemon?.types?.map((types, index) => (
+                    pokemon.types?.map((types, index) => (
                         <span key={index}>{types.type.name}</span>
                     ))
                 }

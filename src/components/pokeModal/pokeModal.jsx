@@ -20,7 +20,7 @@ function PokeModal(props) {
 
     return (
         <div className="modal">
-            <img src={selectedPokemon.sprites?.front_default} alt="Pokemon" />
+            <img src={selectedPokemon.sprites?.other.home.front_default} alt="Pokemon" />
             <p>{selectedPokemon.name}</p>
             <p>{selectedPokemon.weight}</p>
             {
