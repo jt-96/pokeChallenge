@@ -1,22 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home';
 import './App.css';
-import NavBar from './components/navBar/navBar';
-import PokeDex from './components/pokeDex/pokeDex';
-import Footer from './components/footer/footer';
-import { useState } from 'react';
 
 function App() {
 
-  const [searchParam, setSearchParam] = useState('');
-
-  function addSearchParam(param) {
-    setSearchParam(param);
-  }
-
   return (
     <div className="App">
-      <NavBar onAddSearchParam={addSearchParam}/>
-      <PokeDex query={searchParam}/>
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
     </div>
   );
 }
