@@ -5,6 +5,8 @@
 }
 
 h1 {
+    display: flex;
+    align-items: center;
     text-align: left;
     margin-left: 45px;
 }
@@ -15,4 +17,8 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+h1 img {
+    height: 25vh;
 }

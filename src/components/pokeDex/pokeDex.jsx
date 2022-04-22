@@ -24,9 +24,8 @@ function PokeDex() {
         <Fragment>
             <div className="cont">
                 <div>
-                    <h1>LOGO - POKEDEX</h1>
+                    <h1><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h1>
                     <div className="pokemons">
-
                     {
                         currentPokemons.map((pokemon, index) => (
                             <PokeCard key={index} current={pokemon} />
