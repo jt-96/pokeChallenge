@@ -1,8 +1,6 @@
 
 function PokeRecentCard(props) {
 
-    console.log(props)
-
     return (
         <div>
             <img src={props.pokemon.sprites?.other.home.front_default} alt="Recent Pokemon"/>
