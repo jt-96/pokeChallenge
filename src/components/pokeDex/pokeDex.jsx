@@ -24,7 +24,7 @@ function PokeDex() {
         <Fragment>
             <div className="cont">
                 <div>
-                    <h1><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h1>
+                    <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
                     <div className="pokemons">
                     {
                         currentPokemons.map((pokemon, index) => (
