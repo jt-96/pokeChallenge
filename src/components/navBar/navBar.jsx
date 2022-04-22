@@ -5,8 +5,6 @@ import './navBar.css';
 function NavBar(props) {
 
     const [isEnabled, setIsEnabled] = useState(false);
-    const { search } = window.location;
-    const query = new URLSearchParams(search).get('s');
 
     const handleClick = () => {
         setIsEnabled(!isEnabled);

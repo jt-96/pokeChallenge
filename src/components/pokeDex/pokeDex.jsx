@@ -1,61 +1,80 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 import PokeCard from "../pokeCard/pokeCard";
 import PokeRecent from "../pokeRecent/pokeRecent";
 import './pokeDex.css';
 
-const filterPokemons = (pokemons, query) => {
-    if(!query) {
-        return pokemons;
+function PokeDex(props) {
+    
+    const filterPokemons = (pokemons, query) => {
+        if (!query) {
+            return pokemons;
+        }
+    
+        return pokemons.filter((pokemon) => {
+            const pokemonName = pokemon.name;
+            return pokemonName.toLowerCase().includes(query);
+        })
     }
 
-    return pokemons.filter((pokemon) => {
-        const pokemonName = pokemon.name;
-        return pokemonName.toLowerCase().includes(query);
-    })
-}
-
-function PokeDex(props) {
-
-    console.log(props.query);
     // fetch https://pokeapi.co/api/v2/pokemon?offset=0&limit=9
     const [currentPokemons, setCurrentPokemons] = useState([]);
     const [recentPokemon, setRecentPokemon] = useState([]);
+    const [offset, setOffset] = useState(0);
     const filteredPokemons = filterPokemons(currentPokemons, props.query);
-    console.log(filteredPokemons);
+
+    const getPokemons = async () => {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon?&limit=9&offset=${offset}`);
+        const data = await response.json();
+        if(currentPokemons.length == 0){
+            setCurrentPokemons(data.results);
+        } else {
+            setCurrentPokemons((prevResults) => {
+                return [...prevResults, ...data.results]
+            })
+        }
+        setOffset((offset) => offset + 9);
+    }
 
     useEffect(() => {
-        const getPokemons = async () => {
-            const response = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=9');
-            const data = await response.json();
-            setCurrentPokemons(data.results);
-        }
-
         getPokemons();
-
     }, []);
 
-    function addRecentPokemon(pokemon){
+    function addRecentPokemon(pokemon) {
         setRecentPokemon((prevValue) => {
             return [pokemon, ...prevValue];
         })
     }
 
     return (
-        <div className="cont">
-            <div>
-                <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
-                <div className="pokemons">
-                    {
-                        filteredPokemons.map((pokemon, index) => (
-                            <PokeCard key={index} current={pokemon} onAddRecentPokemon={addRecentPokemon}/>
-                        ))
-                    }
+        <Fragment>
+            <div className="cont">
+                <div>
+                    <h2><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />POKEDEX</h2>
+                    <div>
+                        <InfiniteScroll
+                            className="pokemons"
+                            dataLength={filteredPokemons.length}
+                            next={getPokemons}
+                            hasMore={true}
+                            loader={<h4>Loading...</h4>}
+                            endMessage={
+                                <p>Finished!</p>
+                            }
+                        >
+                            {
+                                filteredPokemons.map((pokemon, index) => (
+                                    <PokeCard key={index} current={pokemon} onAddRecentPokemon={addRecentPokemon} />
+                                ))
+                            }
+                        </InfiniteScroll>
+                    </div>
+                </div>
+                <div>
+                    <PokeRecent recent={recentPokemon} />
                 </div>
             </div>
-            <div>
-                <PokeRecent recent={recentPokemon}/>
-            </div>
-        </div>
+        </Fragment>
     )
 }
 
