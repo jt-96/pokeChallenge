@@ -4,7 +4,7 @@ function PokeRecent(){
 
     return (
         <Fragment>
-            <h1>Logo - RECIENTES</h1>
+            <h1><img src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />RECIENTES</h1>
         </Fragment>
     )
 }
