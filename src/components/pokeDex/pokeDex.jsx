@@ -74,6 +74,7 @@ function PokeDex(props) {
                     </div>
                 </div>
                 <div>
+                <h2 className="pokedex__title"><img className="pokedex__img" src={process.env.PUBLIC_URL + `/img/pokeball.png`} alt="Pokeball" />RECIENTES</h2>
                     <PokeRecent recent={recentPokemon} />
                 </div>
             </div>
