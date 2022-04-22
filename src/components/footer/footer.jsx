@@ -1,10 +1,11 @@
 import { Fragment } from "react";
+import './footer.css';
 
 function Footer(){
 
     return (
         <Fragment>
-            <span>TODOS LOS DERECHOS RESERVADOS</span>
+            <footer>TODOS LOS DERECHOS RESERVADOS</footer>
         </Fragment>  
     );
 }
