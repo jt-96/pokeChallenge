@@ -17,7 +17,7 @@
 }
 
 @mixin type() {
-    @include size(5vh, 7vw);
+    @include size(30px, 90px);
     color: #FFF;
     border-radius: 5px;
 }
