@@ -40,9 +40,9 @@ function Modal(props) {
                     <div className="modal__container__types">
                         {
                             props.selectedPokemon.types?.map((types, index) => (
-                                <div className="modal__container__types__type">
+                                <div className="modal__container__types__type" key={index}>
 
-                                    <p className={`modal__container__types__type__` + types.type.name} key={index}>{types.type.name}</p>
+                                    <p className={`modal__container__types__type__` + types.type.name}> {types.type.name}</p>
                                 </div>
                             ))
                         }
