@@ -1,18 +1,163 @@
 .card {
-    margin: 1rem;
+  margin: 1rem;
 }
 
-.card img {
-    height: 200px;
-    background-color: #E1E1E1;
-    border-radius: 5px;
+.card__img {
+  height: 200px;
+  background-color: #E1E1E1;
+  border-radius: 5px;
 }
 
-.card p {
-    text-align: left;
+.card__title {
+  margin: 2px 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
 }
 
-span {
-    float: left;
-    margin-right: .5rem;
+.card__types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
 }
+
+.card__types__container {
+  margin-left: 5px;
+}
+
+.card__types__container__type__normal {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #A9A9A9;
+}
+
+.card__types__container__type__grass {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #008000;
+}
+
+.card__types__container__type__poison {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #EE82EE;
+}
+
+.card__types__container__type__fire {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #FF0000;
+}
+
+.card__types__container__type__flying {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #FFA500;
+}
+
+.card__types__container__type__water {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #ADD8E6;
+}
+
+.card__types__container__type__ground {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #DEB887;
+}
+
+.card__types__container__type__fairy {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #D87093;
+}
+
+.card__types__container__type__bug {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #90EE90;
+}
+
+.card__types__container__type__fighting {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #4682B4;
+}
+
+.card__types__container__type__psychic {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #6A5ACD;
+}
+
+.card__types__container__type__rock {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #B8860B;
+}
+
+.card__types__container__type__electric {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #00CED1;
+}
+
+.card__types__container__type__steel {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #4682B4;
+}
+
+.card__types__container__type__ice {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #40E0D0;
+}
+
+.card__types__container__type__ghost {
+  height: 30px;
+  width: 90px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #8b008b;
+}
+/*# sourceMappingURL=pokeCard.css.map */

@@ -16,7 +16,7 @@ function PokeCard(props) {
 
         getAPokemon();
 
-    },[]);
+    }, []);
 
     function handleClick() {
         setIsActive(true);
@@ -30,17 +30,21 @@ function PokeCard(props) {
     return (
         <Fragment>
             {
-                isActive && <PokeModal selected={props.current} onCloseModal={closeModal}/>
+                isActive && <PokeModal selected={props.current} onCloseModal={closeModal} />
             }
             <div className="card" onClick={handleClick}>
-                <img src={pokemon.sprites?.other.home.front_default} alt="pokemon"/>
-                <p>N° {pokemon.id}</p>
-                <p>{pokemon.name}</p>
-                {
-                    pokemon.types?.map((types, index) => (
-                        <span key={index}>{types.type.name}</span>
-                    ))
-                }
+                <img className="card__img" src={pokemon.sprites?.other.home.front_default} alt="pokemon" />
+                <p className="card__title">N. °{pokemon.id}</p>
+                <p className="card__title">{pokemon.name}</p>
+                <div className="card__types">
+                    {
+                        pokemon.types?.map((types, index) => (
+                            <div className="card__types__container">
+                                <p className={`card__types__container__type__` + types.type.name} key={index}>{types.type.name}</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </Fragment>
     );
