@@ -11,6 +11,12 @@ $bottomPosition: 120px;
     border-radius: 5px;
 }
 
+@mixin capitalize(){
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
 .recent {
     background-color: #343434;
     height: 40vh;
@@ -28,87 +34,104 @@ $bottomPosition: 120px;
     &__info {
 
         &__title {
+            @include capitalize();
             font-size: 25px;
             font-weight: bolder;
         }
 
         &__normal {
             @include type();
+            @include capitalize();
             background-color: #A9A9A9;
         }
 
         &__grass {
             @include type();
+            @include capitalize();
             background-color: #008000;
         }
 
         &__poison {
             @include type();
+            @include capitalize();
             background-color: #EE82EE;
         }
 
         &__fire {
             @include type();
+            @include capitalize();
             background-color: #FF0000;
         }
 
         &__flying {
             @include type();
+            @include capitalize();
             background-color: #FFA500;
         }
 
         &__water {
             @include type();
+            @include capitalize();
             background-color: #ADD8E6;
         }
 
         &__ground {
             @include type();
+            @include capitalize();
             background-color: #DEB887;
         }
 
         &__fairy {
             @include type();
+            @include capitalize();
             background-color: #D87093;
         }
 
         &__bug {
             @include type();
+            @include capitalize();
             background-color: #90EE90;
         }
 
         &__fighting {
             @include type();
+            @include capitalize();
             background-color: #4682B4;
         }
 
         &__psychic {
             @include type();
+            @include capitalize();
             background-color: #6A5ACD;
         }
 
         &__rock {
             @include type();
+            @include capitalize();
             background-color: #B8860B;
         }
 
         &__electric {
             @include type();
+            @include capitalize();
             background-color: #00CED1;
         }
 
         &__steel {
             @include type();
+            @include capitalize();
             background-color: #4682B4;
         }
 
         &__ice {
             @include type();
+            @include capitalize();
             background-color: #40E0D0;
         }
 
         &__ghost {
             @include type();
+            @include capitalize();
             background-color: #8b008b;
         }
 

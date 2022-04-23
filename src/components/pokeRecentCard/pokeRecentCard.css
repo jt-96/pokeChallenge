@@ -35,12 +35,20 @@
   font-weight: bolder;
 }
 
+.recent__info__title::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__normal {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #A9A9A9;
+}
+
+.recent__info__normal::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__grass {
@@ -51,12 +59,20 @@
   background-color: #008000;
 }
 
+.recent__info__grass::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__poison {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #EE82EE;
+}
+
+.recent__info__poison::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__fire {
@@ -67,12 +83,20 @@
   background-color: #FF0000;
 }
 
+.recent__info__fire::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__flying {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #FFA500;
+}
+
+.recent__info__flying::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__water {
@@ -83,12 +107,20 @@
   background-color: #ADD8E6;
 }
 
+.recent__info__water::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__ground {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #DEB887;
+}
+
+.recent__info__ground::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__fairy {
@@ -99,12 +131,20 @@
   background-color: #D87093;
 }
 
+.recent__info__fairy::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__bug {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #90EE90;
+}
+
+.recent__info__bug::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__fighting {
@@ -115,12 +155,20 @@
   background-color: #4682B4;
 }
 
+.recent__info__fighting::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__psychic {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #6A5ACD;
+}
+
+.recent__info__psychic::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__rock {
@@ -131,12 +179,20 @@
   background-color: #B8860B;
 }
 
+.recent__info__rock::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__electric {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #00CED1;
+}
+
+.recent__info__electric::first-letter {
+  text-transform: capitalize;
 }
 
 .recent__info__steel {
@@ -147,6 +203,10 @@
   background-color: #4682B4;
 }
 
+.recent__info__steel::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__ice {
   height: 30px;
   width: 90px;
@@ -155,11 +215,19 @@
   background-color: #40E0D0;
 }
 
+.recent__info__ice::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__ghost {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #8b008b;
+}
+
+.recent__info__ghost::first-letter {
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=pokeRecentCard.css.map */

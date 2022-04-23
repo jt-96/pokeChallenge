@@ -31,9 +31,7 @@
         font-weight: 500;
         text-align: left;
 
-        &::first-letter {
-            text-transform: capitalize;
-        }
+        @include capitalize();
     }
 
     &__types {
@@ -49,7 +47,6 @@
 
             &__type {
 
-                
                 &__normal {
                     @include type();
                     @include capitalize();
