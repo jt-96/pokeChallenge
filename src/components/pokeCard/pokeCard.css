@@ -15,6 +15,10 @@
   text-align: left;
 }
 
+.card__title::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,12 +45,20 @@
   background-color: #A9A9A9;
 }
 
+.card__types__container__type__normal::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__grass {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #008000;
+}
+
+.card__types__container__type__grass::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__poison {
@@ -57,12 +69,20 @@
   background-color: #EE82EE;
 }
 
+.card__types__container__type__poison::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__fire {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #FF0000;
+}
+
+.card__types__container__type__fire::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__flying {
@@ -73,12 +93,20 @@
   background-color: #FFA500;
 }
 
+.card__types__container__type__flying::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__water {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #ADD8E6;
+}
+
+.card__types__container__type__water::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__ground {
@@ -89,12 +117,20 @@
   background-color: #DEB887;
 }
 
+.card__types__container__type__ground::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__fairy {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #D87093;
+}
+
+.card__types__container__type__fairy::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__bug {
@@ -105,12 +141,20 @@
   background-color: #90EE90;
 }
 
+.card__types__container__type__bug::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__fighting {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #4682B4;
+}
+
+.card__types__container__type__fighting::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__psychic {
@@ -121,12 +165,20 @@
   background-color: #6A5ACD;
 }
 
+.card__types__container__type__psychic::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__rock {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #B8860B;
+}
+
+.card__types__container__type__rock::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__electric {
@@ -137,12 +189,20 @@
   background-color: #00CED1;
 }
 
+.card__types__container__type__electric::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__steel {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #4682B4;
+}
+
+.card__types__container__type__steel::first-letter {
+  text-transform: capitalize;
 }
 
 .card__types__container__type__ice {
@@ -153,11 +213,19 @@
   background-color: #40E0D0;
 }
 
+.card__types__container__type__ice::first-letter {
+  text-transform: capitalize;
+}
+
 .card__types__container__type__ghost {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #8b008b;
+}
+
+.card__types__container__type__ghost::first-letter {
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=pokeCard.css.map */

@@ -39,8 +39,8 @@ function PokeCard(props) {
                 <div className="card__types">
                     {
                         pokemon.types?.map((types, index) => (
-                            <div className="card__types__container">
-                                <p className={`card__types__container__type__` + types.type.name} key={index}>{types.type.name}</p>
+                            <div className="card__types__container" key={index}>
+                                <p className={`card__types__container__type__` + types.type.name}>{types.type.name}</p>
                             </div>
                         ))
                     }
