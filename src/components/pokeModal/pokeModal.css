@@ -1,21 +1,21 @@
 .overlay {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
   background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
 }
 
 .modal {
   position: fixed;
   top: 15vh;
   left: 25vw;
+  height: 75vh;
   width: 45vw;
-  z-index: 100;
-  overflow: hidden;
   background-color: #FFFF;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,9 +26,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 65vh;
-  border-radius: 10px;
   padding: 20px;
+  overflow: hidden;
+  z-index: 100;
 }
 
 .modal__img {
@@ -38,33 +38,205 @@
 }
 
 .modal__container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 110px;
 }
 
+.modal__container__title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.modal__container__subtitle {
+  margin: 10px 0;
+}
+
 .modal__container__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
+}
+
+.modal__container__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  width: 25vw;
+  background-color: #343434;
+  color: #FFF;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.modal__container__types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.modal__container__types__type {
+  margin-left: 2px;
+}
+
+.modal__container__types__type__normal {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #A9A9A9;
+}
+
+.modal__container__types__type__grass {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #008000;
+}
+
+.modal__container__types__type__poison {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #EE82EE;
+}
+
+.modal__container__types__type__fire {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #FF0000;
+}
+
+.modal__container__types__type__flying {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #FFA500;
+}
+
+.modal__container__types__type__water {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #ADD8E6;
+}
+
+.modal__container__types__type__ground {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #DEB887;
+}
+
+.modal__container__types__type__fairy {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #D87093;
+}
+
+.modal__container__types__type__bug {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #90EE90;
+}
+
+.modal__container__types__type__fighting {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #4682B4;
+}
+
+.modal__container__types__type__psychic {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #6A5ACD;
+}
+
+.modal__container__types__type__rock {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #B8860B;
+}
+
+.modal__container__types__type__electric {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #00CED1;
+}
+
+.modal__container__types__type__steel {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #4682B4;
+}
+
+.modal__container__types__type__ice {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #40E0D0;
+}
+
+.modal__container__types__type__ghost {
+  height: 5vh;
+  width: 7vw;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: #8b008b;
 }
 
 .modal__button {
   position: absolute;
   top: 5px;
   right: 5px;
+  height: 2rem;
+  width: 2rem;
+  background: #FFCD00;
+  border-radius: 100%;
+  border-style: none;
+  color: #FFFF;
+  font-size: larger;
 }
 /*# sourceMappingURL=pokeModal.css.map */

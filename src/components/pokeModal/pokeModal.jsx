@@ -11,29 +11,45 @@ function Modal(props) {
         <div className="modal">
             <img className="modal__img" src={props.selectedPokemon.sprites?.other.home.front_default} alt="Pokemon" />
             <div className="modal__container">
-                <p>{props.selectedPokemon.name}</p>
-                <p>{props.selectedPokemon.weight}</p>
+                <p className="modal__container__title">{props.selectedPokemon.name}</p>
+                <p className="modal__container__title">{props.selectedPokemon.weight}</p>
             </div>
             <div className="modal__container__info">
                 <div>
-
-                    <p>Puntos Base</p>
-                    {
-                        props.selectedPokemon.stats?.map((stat, index) => {
-                            return <p key={index}>{stat.stat.name} - {stat.base_stat}</p>
-                        })
-                    }
+                    <p className="modal__container__subtitle">Puntos Base</p>
+                    <div className="modal__container__stats">
+                        <div>
+                            <p>PS</p>
+                            <p>ATAQUE</p>
+                            <p>DEFENSA</p>
+                            <p>SPEC ATAQUE</p>
+                            <p>SPEC DEFENSA</p>
+                            <p>VELOCIDAD</p>
+                        </div>
+                        <div>
+                            {
+                                props.selectedPokemon.stats?.map((stat, index) => (
+                                    <p key={index}>{stat.base_stat}</p>
+                                ))
+                            }
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <p>Tipo</p>
-                    {
-                        props.selectedPokemon.types?.map((types, index) => (
-                            <span key={index}>{types.type.name}</span>
-                        ))
-                    }
+                    <p className="modal__container__subtitle">Tipo</p>
+                    <div className="modal__container__types">
+                        {
+                            props.selectedPokemon.types?.map((types, index) => (
+                                <div className="modal__container__types__type">
+
+                                    <p className={`modal__container__types__type__` + types.type.name} key={index}>{types.type.name}</p>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
-            <button className="modal__button" type="button" onClick={props.onCloseModal}>Close</button>
+            <button className="modal__button" type="button" onClick={props.onCloseModal}>X</button>
         </div>
     );
 }
