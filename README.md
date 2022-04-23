@@ -10,7 +10,6 @@ Web App of a simple pokedex, allowing you to search, look to all avaliable Pokem
 
 # Missed TO-DOs.
 
-- Search Bar malfunctioning reaching the deadline.
 - Can't search for ID, only names.
 - Advanced search component.
 - Responsive Design.
