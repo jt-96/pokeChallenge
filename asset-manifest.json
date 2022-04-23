@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pokeChallenge/static/css/main.a2aaa5bd.css",
-    "main.js": "/pokeChallenge/static/js/main.4abc74fb.js",
+    "main.js": "/pokeChallenge/static/js/main.94b80559.js",
     "static/js/787.09c23c0b.chunk.js": "/pokeChallenge/static/js/787.09c23c0b.chunk.js",
     "index.html": "/pokeChallenge/index.html",
     "main.a2aaa5bd.css.map": "/pokeChallenge/static/css/main.a2aaa5bd.css.map",
-    "main.4abc74fb.js.map": "/pokeChallenge/static/js/main.4abc74fb.js.map",
+    "main.94b80559.js.map": "/pokeChallenge/static/js/main.94b80559.js.map",
     "787.09c23c0b.chunk.js.map": "/pokeChallenge/static/js/787.09c23c0b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a2aaa5bd.css",
-    "static/js/main.4abc74fb.js"
+    "static/js/main.94b80559.js"
   ]
 }
