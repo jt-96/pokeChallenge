@@ -53,6 +53,10 @@
   font-weight: bolder;
 }
 
+.modal__container__title::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__subtitle {
   margin: 10px 0;
 }
@@ -107,12 +111,20 @@
   background-color: #A9A9A9;
 }
 
+.modal__container__types__type__normal::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__grass {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #008000;
+}
+
+.modal__container__types__type__grass::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__poison {
@@ -123,12 +135,20 @@
   background-color: #EE82EE;
 }
 
+.modal__container__types__type__poison::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__fire {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #FF0000;
+}
+
+.modal__container__types__type__fire::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__flying {
@@ -139,12 +159,20 @@
   background-color: #FFA500;
 }
 
+.modal__container__types__type__flying::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__water {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #ADD8E6;
+}
+
+.modal__container__types__type__water::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__ground {
@@ -155,12 +183,20 @@
   background-color: #DEB887;
 }
 
+.modal__container__types__type__ground::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__fairy {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #D87093;
+}
+
+.modal__container__types__type__fairy::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__bug {
@@ -171,12 +207,20 @@
   background-color: #90EE90;
 }
 
+.modal__container__types__type__bug::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__fighting {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #4682B4;
+}
+
+.modal__container__types__type__fighting::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__psychic {
@@ -187,12 +231,20 @@
   background-color: #6A5ACD;
 }
 
+.modal__container__types__type__psychic::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__rock {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #B8860B;
+}
+
+.modal__container__types__type__rock::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__electric {
@@ -203,12 +255,20 @@
   background-color: #00CED1;
 }
 
+.modal__container__types__type__electric::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__steel {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #4682B4;
+}
+
+.modal__container__types__type__steel::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__container__types__type__ice {
@@ -219,12 +279,20 @@
   background-color: #40E0D0;
 }
 
+.modal__container__types__type__ice::first-letter {
+  text-transform: capitalize;
+}
+
 .modal__container__types__type__ghost {
   height: 30px;
   width: 90px;
   color: #FFF;
   border-radius: 5px;
   background-color: #8b008b;
+}
+
+.modal__container__types__type__ghost::first-letter {
+  text-transform: capitalize;
 }
 
 .modal__button {
