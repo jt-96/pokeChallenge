@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,gBAAgB,EAAE,OAAO;CAC5B",
-    "sources": [
-        "pokeRecent.scss"
-    ],
-    "names": [],
-    "file": "pokeRecent.css"
-}

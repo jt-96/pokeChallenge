@@ -1,10 +1,9 @@
 import PokeRecentCard from "../pokeRecentCard/pokeRecentCard";
-import './pokeRecent.css';
 
 function PokeRecent(props){
 
     return (
-        <div className="recent__container">
+        <div>
             {
                 props.recent?.slice(0, 3).map((pokemon, index) => (
 
