@@ -13,3 +13,5 @@ Web App of a simple pokedex, allowing you to search, look to all avaliable Pokem
 - Can't search for ID, only names.
 - Advanced search component.
 - Responsive Design.
+
+Deployed at https://jt-96.github.io/pokeChallenge/
