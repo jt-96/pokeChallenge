@@ -1,0 +1,78 @@
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #FFCE00;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.search__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.search__bar__title {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.search__bar__input {
+  height: 20px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search__bar__subtitle {
+  margin: 5px 0;
+  font-size: 15px;
+  width: 20rem;
+  text-align: start;
+}
+
+.search__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #BE9900;
+  height: 7rem;
+  width: 30rem;
+  padding: 0 2rem;
+  border-radius: 10px;
+}
+
+.search__info__img {
+  margin: 0 10px;
+  height: 50%;
+}
+/*# sourceMappingURL=searchBar.css.map */

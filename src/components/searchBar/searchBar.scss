@@ -1,0 +1,54 @@
+@mixin flexRowCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search {
+    @include flexRowCenter();
+    justify-content: space-around;
+    background-color: #FFCE00;
+    color: #FFFFFF;
+    padding: 1rem;
+
+    &__bar {
+        @include flexRowCenter();
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        &__input {
+            height: 20px;
+            width: 400px;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        &__subtitle {
+            margin: 5px 0;
+            font-size: 15px;
+            width: 20rem;
+            text-align: start;
+        }
+    }
+
+    &__info {
+        @include flexRowCenter();
+        background-color: #BE9900;
+        height: 7rem;
+        width: 30rem;
+        padding: 0 2rem;
+        border-radius: 10px;
+
+        &__img {
+            margin: 0 10px;
+            height: 50%;
+        }
+    }
+
+}
