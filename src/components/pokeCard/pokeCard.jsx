@@ -3,7 +3,6 @@ import PokeModal from "../pokeModal/pokeModal";
 import './pokeCard.css';
 
 function PokeCard(props) {
-    console.log(props);
     const [pokemon, setPokemon] = useState({});
     const [url, setUrl] = useState(props.current.url);
     const [isActive, setIsActive] = useState(false);
