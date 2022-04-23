@@ -1,16 +1,17 @@
+import { Fragment } from "react";
 import PokeRecentCard from "../pokeRecentCard/pokeRecentCard";
 
 function PokeRecent(props){
 
     return (
-        <div>
+        <Fragment>
             {
                 props.recent?.slice(0, 3).map((pokemon, index) => (
 
                     <PokeRecentCard key={index} pokemon={pokemon}/>
                 ))
             }
-        </div>
+        </Fragment>
     )
 }
 
