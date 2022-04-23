@@ -4,19 +4,18 @@ import './pokeCard.css';
 
 function PokeCard(props) {
     const [pokemon, setPokemon] = useState({});
-    const [url, setUrl] = useState(props.current.url);
     const [isActive, setIsActive] = useState(false);
-
+    
     useEffect(() => {
         async function getAPokemon() {
-            const response = await fetch(url);
+            const response = await fetch(props.current.url);
             const data = await response.json();
             setPokemon(data);
         }
 
         getAPokemon();
 
-    }, []);
+    }, [props]);
 
     function handleClick() {
         setIsActive(true);
