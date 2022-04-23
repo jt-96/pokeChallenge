@@ -30,6 +30,10 @@
           justify-content: space-between;
 }
 
+.recent__info__skill::first-letter {
+  text-transform: capitalize;
+}
+
 .recent__info__title {
   font-size: 25px;
   font-weight: bolder;

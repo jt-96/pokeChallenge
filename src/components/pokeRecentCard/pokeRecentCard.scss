@@ -33,6 +33,10 @@ $bottomPosition: 120px;
 
     &__info {
 
+        &__skill {
+            @include capitalize();
+        }
+
         &__title {
             @include capitalize();
             font-size: 25px;

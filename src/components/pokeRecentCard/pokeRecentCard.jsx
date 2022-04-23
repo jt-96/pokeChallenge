@@ -21,7 +21,7 @@ function PokeRecentCard(props) {
                 <span>Habilidad</span>
                 {
                     props.pokemon.abilities?.map((skill, index) => (
-                        <span key={index}>{skill.ability.name}</span>
+                        <span className='recent__info__skill' key={index}>{skill.ability.name}</span>
                     ))
                 }
             </div>
